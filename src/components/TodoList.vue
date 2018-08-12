@@ -37,7 +37,9 @@ export default {
   data() {
     return {
       title: "Vue.js todo list",
-      items: [{ id: 1, text: "First item" }],
+      items: [
+        { id: 1, text: "First item" }
+      ],
       itemText: "",
       currentItem: {},
       pstyle: { "text-align": "center" }
