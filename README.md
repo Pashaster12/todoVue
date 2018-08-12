@@ -1,6 +1,6 @@
-# todo.vue
+# todoVue
 
-> A Vue.js todo list project
+> A simple todo list Vue.js component
 
 ## Build Setup
 
