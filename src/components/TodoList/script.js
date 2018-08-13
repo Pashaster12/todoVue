@@ -45,8 +45,19 @@ export default {
   directives: {
     'todo-focus': function (el, binding) {
       if (binding.value) {
-        el.focus()
+        el.focus();
       }
     }
+  },
+  watch: {
+      items: {
+        handler: function(oldValue, newValue) {
+            localStorage.setItem('todo-items', JSON.stringify(this.items));
+        },
+        deep: true
+      }
+  },
+  mounted: function() {
+      if (localStorage.getItem('todo-items')) this.items = JSON.parse(localStorage.getItem('todo-items'));
   }
 };
