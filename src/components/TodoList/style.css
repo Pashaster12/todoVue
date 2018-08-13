@@ -1,0 +1,14 @@
+h1 {
+  text-align: center;
+}
+input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #000;
+}
+li {
+  padding-bottom: 10px;
+}
+.item-controls {
+  float: right;
+}
