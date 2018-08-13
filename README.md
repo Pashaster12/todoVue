@@ -1,8 +1,10 @@
 # todoVue
 
-> A simple todo list Vue.js component
+> A simple web Node.js application with todo list Vue.js component.
 
-## Build Setup
+Application based on the [Webpack Vue.js template](http://vuejs-templates.github.io/webpack/) for [Vue CLI](https://cli.vuejs.org/guide/).
+
+## Application running
 
 ``` bash
 # install dependencies
@@ -16,15 +18,21 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Component structure
+
+A todo list component was realised as a [single file component](https://vuejs.org/v2/guide/single-file-components.html) firstly (you can see it according to the commits) and then its code was separated to three different files containing HTML, JS and CSS code.
+
+## Component features
+
+Component provides the CRUD operations with the todo list items, i.e.:
+
+- Viewing the all todo list items
+- Adding new items
+- Editing existed items
+- Deleting items
+
+Also it possible to change the status of the current item to `Completed/Not completed` pressing on the label with the current status.
+
+Todo list state saves to the browser `localStorage`, so you can view the edited list even after the page reloading.
