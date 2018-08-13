@@ -23,6 +23,13 @@
       >
         {{ item.text }}
         <span class="item-controls">
+          <span 
+            :class="item.completed ? 'completed' : 'not_completed'"
+            @click="changeStatus(item)"
+            :title="statusTitle"
+          >
+            {{ item.completed ? 'Completed' : 'Not completed' }}
+          </span>
           <button @click="editItem(item)">Edit</button>
           <button @click="deleteItem(item.id)">Delete</button>
         </span>

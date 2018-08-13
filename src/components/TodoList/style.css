@@ -12,3 +12,9 @@ li {
 .item-controls {
   float: right;
 }
+.completed {
+    color: #009926;
+}
+.not_completed {
+    color: #d14;
+}

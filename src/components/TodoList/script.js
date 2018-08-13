@@ -4,10 +4,15 @@ export default {
     return {
       title: "Vue.js todo list",
       items: [
-        { id: 1, text: "First item" }
+        {
+            id: 1,
+            text: "First item",
+            completed: false
+        }
       ],
       itemText: "",
       currentItem: {},
+      statusTitle: "Click on this element to change the item status",
       pstyle: { "text-align": "center" }
     };
   },
@@ -23,7 +28,11 @@ export default {
             }
           });
         }
-        else this.items.push({ id: this.items.length + 1, text: this.itemText });
+        else this.items.push({ 
+            id: this.items.length + 1, 
+            text: this.itemText,
+            completed: false
+        });
         this.itemText = "";
       }
       else alert('The todo item name can not be empty!');
@@ -40,6 +49,14 @@ export default {
     editItem: function(item) {
       this.itemText = item.text;
       this.currentItem = item;
+    },
+    changeStatus: function(item) {
+        this.items.forEach((element, index) => {
+            if (element.id === item.id) {
+              this.items[index].completed = !item.completed;
+            }
+        });
+        this.currentItem = item;
     }
   },
   directives: {
